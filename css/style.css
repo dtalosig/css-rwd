@@ -1,0 +1,477 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;  /* TO AVOID OVERFLOWS */
+}
+
+
+
+/*MOBILE*/
+@media only screen and (max-width:400px){
+
+nav{
+	background-color: lightyellow;
+	position: static;
+	width: 100%;
+}
+
+
+main{
+	background-color: lightgrey;
+	position: relative;
+}
+
+.banner{
+	position: relative;
+	height: 700px;
+	background-color: lightblue;
+}
+
+.about{
+	background-color: indianred;
+	/*height: 700px;*/				/*To avoid overlapping, remove the fix height and replace it with min-height*/
+	min-height: 300px;
+}
+
+.services{
+	background-color: midnightblue;
+	/*height: 300px;*/				/*To avoid overlapping, remove the fix height and replace it with min-height*/
+	min-height: 300px;
+	color: white;
+}
+
+.projects{
+	background-color: crimson;
+	height: 300px;
+}
+
+.gallery{
+	background-color: orange;
+	/*height: 400px;*/				/*To avoid overlapping, remove the fix height and replace it with min-height*/
+	min-height: 400px;
+}
+
+footer{
+	background-color: green;
+	text-align: center;
+}
+
+nav,
+.banner,
+.about,
+.services,
+.projects,
+.gallery,
+footer{
+	padding: 30px;
+}
+
+.logo{
+	width: 140px;
+	height: 140px;
+	background-color: grey;
+	margin: 0 auto;				/*CENTER*/
+}
+
+ul > li{
+	list-style: none;		/* REMOVE THE BULLETS OF UNORDERED/ORDERED LIST */
+	background-color: lightblue; 
+	margin-bottom: 2px;
+	line-height: 48px;
+	text-align: center;	
+}
+
+ul > li > a{
+	display: inline-block;			/*to fit the <a> to its parent <li>*/ /*you can also edit your html and put the <li> inside the <a>*/
+	text-decoration: none;
+	height: 100%;
+	width: 100%;
+}
+
+.box{
+	border: 5px solid white;
+	text-align: center;
+	width: 215px;
+	height: 215px;
+	padding: 40px;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%);	/*give another calculation -- so that the measurement will start at the
+												 CENTER OF THE CONTENT OF THE ELEMENT to make it center*/
+}
+
+.column{
+	border: 1px solid #fff;
+	width: 300px;				/*it will overlap*/
+	margin-left: 1%;
+	margin-right:1%;
+	margin-bottom: 1%;
+	padding: 10px;
+}
+
+.clear:after{					/*remove overlapping CAUSE of floating EFFECT*/
+	content: "";
+	display: block;
+	clear: both;
+}
+
+img[alt*="Services"]{			/* without asterisk(*) it will only find the exact value you declare*/
+	border: 1px solid white;
+	float: left;
+	width: 60px;
+	height: 60px;
+	display: block;
+	margin-right: 10px;
+}
+
+img[alt*="Services"] ~ h3{
+	margin-bottom: 10px;
+}
+
+img[alt*="Services"] ~ p {
+	overflow: hidden;			/*it will remove OVERFLOW its like creating some COLUMN so that it wont overflow in image*/
+								/*make another column or remove the overflowing of a paragraph*/
+}
+
+.gallery > .column{				/*overwrite the width declared at column class*/
+	margin-bottom: 
+	border-color: black;
+} 
+
+img[alt*="Gallery"]{
+	width: 100%;
+	display: block;
+	border: 1px solid black;
+	height: 100px;
+}
+
+img[alt*="Social"]{
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	border: 1px solid black;
+	margin: 0 auto;
+}
+
+div.contact{
+	margin: 0 auto;
+
+}
+
+}
+
+
+/*TABLET*/
+@media only screen and (min-width: 401px) and (max-width:960px){
+nav{
+	background-color: lightyellow;
+	position: fixed;
+	width: 152px;
+}
+
+nav > .logo{
+	width: 92px;
+	height: 92px;
+}
+
+
+main{
+	background-color: lightgrey;
+	margin-left: 152px;
+}
+
+.banner{
+	position: relative;
+	height: 700px;
+	background-color: lightblue;
+}
+
+.about{
+	background-color: indianred;
+	/*height: 700px;*/				/*To avoid overlapping, remove the fix height and replace it with min-height*/
+	min-height: 300px;
+}
+
+.services{
+	background-color: midnightblue;
+	/*height: 300px;*/				/*To avoid overlapping, remove the fix height and replace it with min-height*/
+	min-height: 300px;
+	color: white;
+}
+
+.projects{
+	background-color: crimson;
+	height: 300px;
+}
+
+.gallery{
+	background-color: orange;
+	/*height: 400px;*/				/*To avoid overlapping, remove the fix height and replace it with min-height*/
+	min-height: 400px;
+}
+
+footer{
+	background-color: green;
+	height: 100%;
+}
+
+nav,
+.banner,
+.about,
+.services,
+.projects,
+.gallery,
+footer{
+	padding: 30px;
+}
+
+.logo{
+	width: 140px;
+	height: 140px;
+	background-color: grey;
+	margin: 0 auto;				/*CENTER*/
+}
+
+ul > li{
+	list-style: none;		/* REMOVE THE BULLETS OF UNORDERED/ORDERED LIST */
+	background-color: lightblue; 
+	margin-bottom: 2px;
+	line-height: 30px;
+	width: 92px;
+	text-align: center;	
+}
+
+ul > li > a{
+	display: inline-block;			/*to fit the <a> to its parent <li>*/ /*you can also edit your html and put the <li> inside the <a>*/
+	text-decoration: none;
+	width: 92px;
+}
+
+.box{
+	border: 5px solid white;
+	text-align: center;
+	width: 40%;
+	padding: 40px;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%);	/*give another calculation -- so that the measurement will start at the
+												 CENTER OF THE CONTENT OF THE ELEMENT to make it center*/
+}
+
+.column{
+	border: 1px solid #fff;
+	margin-bottom: 5px;
+	width: 100%;			/*it will overlap*/
+	margin-left: 1%;
+	margin-right:1%;
+	padding: 10px;
+}
+
+.clear:after{					/*remove overlapping CAUSE of floating EFFECT*/
+	content: "";
+	display: block;
+	clear: both;
+}
+
+img[alt*="Services"]{			/* without asterisk(*) it will only find the exact value you declare*/
+	border: 1px solid white;
+	width: 60px;
+	height: 60px;
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+
+img[alt*="Services"] ~ h3{
+	margin-bottom: 10px;
+}
+
+img[alt*="Services"] ~ p {
+	overflow: hidden;			/*it will remove OVERFLOW its like creating some COLUMN so that it wont overflow in image*/
+								/*make another column or remove the overflowing of a paragraph*/
+}
+
+.gallery > .column{
+	width: 48%;	
+	float: left;				/*overwrite the width declared at column class*/
+	margin: 1% 1%;
+	border-color: black;
+} 
+
+img[alt*="Gallery"]{
+	width: 100%;
+	display: block;
+	border: 1px solid black;
+	height: 100px;
+}
+
+img[alt*="Social"]{
+	width: 30px;
+	height: 30px;
+	border: 1px solid black;
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+
+div.contact{
+	float: right;
+}
+}
+
+
+/*LAPTOP/DESKTOP*/
+@media only screen and (min-width: 961px){
+nav{
+	background-color: lightyellow;
+	position: fixed;
+	width: 200px;
+	height: 100%;
+}
+
+
+main{
+	background-color: lightgrey;
+	margin-left: 200px;
+}
+
+.banner{
+	position: relative;
+	height: 700px;
+	background-color: lightblue;
+}
+
+.about{
+	background-color: indianred;
+	/*height: 700px;*/				/*To avoid overlapping, remove the fix height and replace it with min-height*/
+	min-height: 300px;
+}
+
+.services{
+	background-color: midnightblue;
+	/*height: 300px;*/				/*To avoid overlapping, remove the fix height and replace it with min-height*/
+	min-height: 300px;
+	color: white;
+}
+
+.projects{
+	background-color: crimson;
+	height: 300px;
+}
+
+.gallery{
+	background-color: orange;
+	/*height: 400px;*/				/*To avoid overlapping, remove the fix height and replace it with min-height*/
+	min-height: 400px;
+}
+
+footer{
+	background-color: green;
+	height: 100%;
+}
+
+nav,
+.banner,
+.about,
+.services,
+.projects,
+.gallery,
+footer{
+	padding: 30px;
+}
+
+.logo{
+	width: 140px;
+	height: 140px;
+	background-color: grey;
+	margin: 0 auto;				/*CENTER*/
+}
+
+ul > li{
+	list-style: none;		/* REMOVE THE BULLETS OF UNORDERED/ORDERED LIST */
+	background-color: lightblue; 
+	margin-bottom: 2px;
+	line-height: 48px;
+	text-align: center;	
+}
+
+ul > li > a{
+	display: inline-block;			/*to fit the <a> to its parent <li>*/ /*you can also edit your html and put the <li> inside the <a>*/
+	text-decoration: none;
+	height: 100%;
+	width: 100%;
+}
+
+.box{
+	border: 5px solid white;
+	text-align: center;
+	width: 40%;
+	padding: 40px;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%);	/*give another calculation -- so that the measurement will start at the
+												 CENTER OF THE CONTENT OF THE ELEMENT to make it center*/
+}
+
+.column{
+	border: 1px solid #fff;
+	width: 31%;
+	float: left;				/*it will overlap*/
+	margin-left: 1%;
+	margin-right:1%;
+	padding: 10px;
+}
+
+.clear:after{					/*remove overlapping CAUSE of floating EFFECT*/
+	content: "";
+	display: block;
+	clear: both;
+}
+
+img[alt*="Services"]{			/* without asterisk(*) it will only find the exact value you declare*/
+	border: 1px solid white;
+	width: 60px;
+	height: 60px;
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+
+img[alt*="Services"] ~ h3{
+	margin-bottom: 10px;
+}
+
+img[alt*="Services"] ~ p {
+	overflow: hidden;			/*it will remove OVERFLOW its like creating some COLUMN so that it wont overflow in image*/
+								/*make another column or remove the overflowing of a paragraph*/
+}
+
+.gallery > .column{
+	width: 23%;					/*overwrite the width declared at column class*/
+	margin: 0 1%;
+	border-color: black;
+} 
+
+img[alt*="Gallery"]{
+	width: 100%;
+	display: block;
+	border: 1px solid black;
+	height: 100px;
+}
+
+img[alt*="Social"]{
+	width: 30px;
+	height: 30px;
+	border: 1px solid black;
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+
+div.contact{
+	float: right;
+}
+}
